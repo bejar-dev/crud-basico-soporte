@@ -1,0 +1,250 @@
+:root{ --bg:#f4f6f8; --card:#ffffff; --accent:#2b6cb0 }
+body{ font-family: Inter, Roboto, Arial, sans-serif; background:var(--bg); margin:0; padding:20px }
+.container{ max-width:1100px; margin:0 auto }
+h1{ color:var(--accent) }
+.grid{ display:grid; grid-template-columns: 1fr 1fr; gap:20px }
+.panel{ background:var(--card); padding:16px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.06) }
+.form label{ display:block; font-weight:600; margin-top:8px }
+.form input, .form textarea, .form select{ width:100%; padding:8px; margin-top:4px; border:1px solid #ddd; border-radius:4px }
+.form textarea{ min-height:80px }
+.form-actions{ margin-top:10px }
+button{ background:var(--accent); color:white; border:none; padding:8px 12px; border-radius:6px; cursor:pointer }
+button[disabled]{ opacity:0.6 }
+.list{ display:flex; flex-direction:column; gap:10px }
+.card{ border:1px solid #e6e6e6; padding:10px; border-radius:6px; background:#fff }
+.card-header{ display:flex; justify-content:space-between; align-items:center }
+.card-body{ margin-top:8px }
+.card-actions{ margin-top:8px; display:flex; gap:8px }
+.top-row form{ display:flex; gap:8px; align-items:center }
+.top-row input{ padding:6px }
+.modal{ position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.5); z-index:1000 }
+.modal-content{ width:600px; background:white; padding:20px; border-radius:8px; box-shadow:0 4px 20px rgba(0,0,0,0.3); max-height:90vh; overflow-y:auto }
+@media(max-width:900px){ .grid{ grid-template-columns: 1fr } .modal-content{ width:auto; margin:0 12px } }
+
+/* ===== LOGIN ===== */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #4f46e5, #3b82f6);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.login-box {
+  background-color: white;
+  padding: 2rem 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  width: 350px;
+}
+
+.login-box h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.login-input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.login-button:hover {
+  background-color: #4338ca;
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  color: #4f46e5;
+}
+
+/* ===== CARRITO ===== */
+.cart-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.cart-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.cart-item-title {
+  font-weight: bold;
+}
+
+.cart-close-btn {
+  width: 100%;
+  margin-top: 15px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cart-close-btn:hover {
+  background-color: #4338ca;
+}
+
+/* ===== BOTONES ===== */
+.button-primary {
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.button-primary:hover {
+  background-color: #4338ca;
+}
+
+.logout {
+  color: red;
+  font-size: 13px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  text-decoration: underline;
+}
+
+.logout:hover {
+  color: darkred;
+}
+.cart-panel {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 350px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.2);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s ease;
+  z-index: 999;
+}
+
+.cart-panel.show {
+  right: 0;
+}
+
+.cart-header, .cart-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-body {
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f7f7f7;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(120deg, #0077b6, #00b4d8);
+}
+
+.login-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 350px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.login-box h1 {
+  margin-bottom: 1.5rem;
+  color: #0077b6;
+}
+
+.login-box input {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.login-box button {
+  width: 100%;
+  background: #0077b6;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-box button:hover {
+  background: #005f8a;
+}
+
+.link-btn {
+  background: none;
+  color: #0077b6;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+}
