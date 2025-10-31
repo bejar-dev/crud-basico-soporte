@@ -17,7 +17,10 @@ Pasos rápidos (resumen):
 3. Configura `server/.env` con las credenciales de MySQL (o edita `server/db.js`).
 4. En dos terminales: instalar dependencias y ejecutar:
    - Backend:
-     cd server; npm install; npm run start
+     cd server; npm install; npm install bcryptjs; npm run start
+     
+node server.js
+
    - Frontend:
      cd client; npm install; npm run dev
 
@@ -48,5 +51,3 @@ CREATE TABLE users (
 Notas importantes:
 - XAMPP suele usar `root` sin contraseña en entornos locales; si es así, puedes dejar password vacía.
 - Revisa `server/.env.example` y copia a `.env` con tus valores.
-
-Si quieres, puedo también crear un script SQL automático o ayudarte a configurar phpMyAdmin/usuarios.
